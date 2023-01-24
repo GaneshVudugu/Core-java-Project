@@ -14,7 +14,7 @@
             public class Lockedme {
 	                        //This block contain standard Error message and default path.
 		   static final String errorMessage = " If Some error occured please contact admin: admin@LockedMe.Com";
-		   static final String projectFilesPath = "E:/";
+		   static final String Myjavapractice = "E:/";
 
 		              // This method display menu options, application name and Developer name.
 		   public static void displayMenu() {
@@ -60,12 +60,12 @@
 
 
 
-	                      // This method is shows all files and folders present in "projectFilesPath" in
+	                      // This method is shows all files and folders present in "Myjavapractice" in
 		                    // ascending order.
 		                    // As per requirement of project.
 		  public static void getAllFiles() {
 			try {
-				File folder = new File(projectFilesPath);
+				File folder = new File(Myjavapractice);
 				File[] listOfFiles = folder.listFiles();
 				if (listOfFiles.length == 0) {
 					System.out.println("No Files exist");
@@ -113,7 +113,7 @@
 
 	             System.out.println("Enter the filename: ");
 				fileName = obj.nextLine();
-				String newpath = (projectFilesPath + "\\" + fileName);
+				String newpath = (Myjavapractice + "\\" + fileName);
 				boolean b = fileNamevalidation(fileName);
 				while (b) {
 					b = false;
@@ -143,7 +143,7 @@
 				String fileName;
 				System.out.println("Enter the file name to be deleted");
 				fileName = obj.nextLine();
-				File file = new File(projectFilesPath + "\\" + fileName);
+				File file = new File(Myjavapractice + "\\" + fileName);
 
 				if ((file.exists() == true) && (fileName != "null")) {
 					file.delete();
@@ -168,7 +168,7 @@
 
 				System.out.println("Enter the file name to be Searched");
 				fileName = obj.nextLine();
-				File folder = new File(projectFilesPath);
+				File folder = new File(Myjavapractice);
 				File[] listOfFiles = folder.listFiles();
 				LinkedList<String> filenames = new LinkedList<String>();
 				for (var l : listOfFiles)
@@ -260,4 +260,4 @@
 
 		    }
 
-                    }
+	    }
